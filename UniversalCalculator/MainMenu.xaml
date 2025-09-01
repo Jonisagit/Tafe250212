@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Calculator.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<StackPanel>
+			<StackPanel Background="LightGray" Orientation="Horizontal" HorizontalAlignment="Center">
+				<TextBlock x:Name="universalCalculator" Text="Universal Calculator" FontWeight="Bold" FontSize="50"
+Margin="40"/>
+				<Image Source="/abacus.jpg" MaxHeight="100"/>
+			</StackPanel>
+
+			<StackPanel Background="DarkGray">
+				
+				<Button Name="MathsCalculatorButton" Content="Maths Calculator" Click="MathsCalculatorButton_Click" Margin="25" Background="LightYellow" BorderBrush="Blue" BorderThickness="2" Foreground="Black" FontWeight="Bold" FontSize="30" />
+				
+				<Button Name="MortgageCalculatorButton" Content="Mortgage Calculator" Click="MortgageCalculatorButton_Click" Margin="25" Background="LightYellow" BorderBrush="Blue" BorderThickness="2" Foreground="Black" FontWeight="Bold" FontSize="30" />
+				
+				<Button Name="CurrencyCalculatorButton" Content="Currency Calculator" Click="CurrencyCalculatorButton_Click" Margin="25" Background="LightYellow" BorderBrush="Blue" BorderThickness="2" Foreground="Black" FontWeight="Bold" FontSize="30" />
+				
+				<Button Name="TripCalculatorButton" Content="Trip Calculator" Click="TripCalculatorButton_Click" Margin="25" Background="LightYellow" BorderBrush="Blue" BorderThickness="2" Foreground="Black" FontWeight="Bold" FontSize="30" />
+				
+				<Button Name="Exit" Content="Exit" Click="ExitButton_Click" Margin="25" Background="LightYellow" BorderBrush="Blue" BorderThickness="2" Foreground="Black" FontWeight="Bold" FontSize="30" />
+				
+			</StackPanel>
+
+		</StackPanel>
+	</Grid>
+</Page>
