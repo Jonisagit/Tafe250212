@@ -8,7 +8,61 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
 
-    </Grid>
+	
+	<Grid Padding="20">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<!-- Title -->
+		<TextBlock Grid.Row="0" Text="Mortgage Calculator" FontSize="24" FontWeight="Bold" Margin="0,0,0,12"/>
+
+		<!-- Inputs and Calculations -->
+		<StackPanel Grid.Row="1" Orientation="Vertical" Spacing="8">
+			<!-- Input: Principal Borrowed -->
+			<StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+				<TextBlock Text="Principal Borrowed: $" Width="200" VerticalAlignment="Center"/>
+				<TextBox x:Name="PrincipalBorrowedTextBox" Width="200"/>
+			</StackPanel>
+
+			<!-- Input: Years -->
+			<StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+				<TextBlock Text="Years:" Width="200" VerticalAlignment="Center"/>
+				<TextBox x:Name="YearsTextBox" Width="200"/>
+			</StackPanel>
+
+			<!-- Input: Months -->
+			<StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+				<TextBlock Text="Months:" Width="200" VerticalAlignment="Center"/>
+				<TextBox x:Name="MonthsTextBox" Width="200"/>
+			</StackPanel>
+
+			<!-- Input: Annual Interest Rate -->
+			<StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+				<TextBlock Text="Annual Interest Rate: %" Width="200" VerticalAlignment="Center"/>
+				<TextBox x:Name="AnnualInterestRateTextBox" Width="200"/>
+			</StackPanel>
+
+			<!-- Calculated: Monthly Interest Rate -->
+			<StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+				<TextBlock Text="Monthly Interest Rate:" Width="200" VerticalAlignment="Center"/>
+				<TextBox x:Name="MonthlyInterestRateTextBox" Width="200" IsReadOnly="True"/>
+			</StackPanel>
+
+			<!-- Calculated: Monthly Repayment -->
+			<StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+				<TextBlock Text="Monthly Repayment:" Width="200" VerticalAlignment="Center"/>
+				<TextBox x:Name="MonthlyRepaymentTextBox" Width="200" IsReadOnly="True"/>
+			</StackPanel>
+		</StackPanel>
+
+		<!-- Buttons -->
+		<StackPanel Grid.Row="2" Orientation="Vertical" Spacing="8" Margin="0,12,0,0">			
+			<Button x:Name="CalculateButton" Content="Calculate" Click="CalculateButton_Click"/>
+			<Button x:Name="ExitButton" Content="Exit" Click="ExitButton_Click"/>
+		</StackPanel>
+	</Grid>
 </Page>
