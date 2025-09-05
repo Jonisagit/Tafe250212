@@ -26,5 +26,39 @@ namespace Calculator
 		{
 			this.InitializeComponent();
 		}
+
+		private void CalculateButton_Click(object sender, RoutedEventArgs e)
+		{
+			// Read text values into double and int variables
+			
+			// Inputs
+			double principalBorrowed = double.Parse(PrincipalBorrowedTextBox.Text);
+			int years = int.Parse(YearsTextBox.Text);
+			int months = int.Parse(MonthsTextBox.Text);
+			double annualInterestRate = double.Parse(AnnualInterestRateTextBox.Text);
+
+			// Calculations   
+			// output this to text box on calculation click
+			double monthlyInterestRate = annualInterestRate / 12.0;
+			// just for calculation
+			double decimalMonthlyInterestRate = monthlyInterestRate * 0.01;
+			// just for calculation
+			int numberOfPayments = years * 12 + months;
+			// intermediate calculation 1
+			double numerator = principalBorrowed * decimalMonthlyInterestRate * Math.Pow(1 + decimalMonthlyInterestRate, numberOfPayments);
+			// intermediate calculation 2
+			double denominator = Math.Pow(1 + decimalMonthlyInterestRate, numberOfPayments) - 1;
+			// final calculation for output
+			double monthlyRepayment = numerator / denominator;
+
+			// output results
+			MonthlyInterestRateTextBox.Text = monthlyInterestRate.ToString() + "%";
+			MonthlyRepaymentTextBox.Text = monthlyRepayment.ToString("C");
+		}
+
+		private void ExitButton_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Exit();
+		}
 	}
 }
