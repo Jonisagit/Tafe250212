@@ -13,7 +13,7 @@
 			<TextBlock x:Name="outputTextBlock" Text="Currency Conversion Calculator" Margin="10" FontSize="36" Height="74" Foreground="#FF080101" />
 		</StackPanel>
 		<StackPanel HorizontalAlignment="Left" Width="393" Margin="0,145,0,0" >
-			<TextBlock x:Name="Amount" Text="Amount ($)" Margin="10" FontSize="36" Height="64" Foreground="#FF080101" Width="210" />
+			<TextBlock x:Name="Amount" Text="Amount ($)" Margin="10" FontSize="36" Height="64" Foreground="#FF080101" Width="210" TextAlignment="Center" />
 			<TextBox x:Name="amountBox" Width="284" Height="44" />
 			<TextBlock x:Name="Result" Margin="10" FontSize="16" Height="390" Foreground="#FF080101" Width="381" />
 		</StackPanel>
