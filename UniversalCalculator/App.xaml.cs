@@ -28,7 +28,7 @@ namespace Calculator
 			}
 
 			if (e.PrelaunchActivated == false)
-			{
+			{ // just added comment because already had set up navigation
 				if (rootFrame.Content == null)
 					rootFrame.Navigate(typeof(MainMenu), e.Arguments);
 
