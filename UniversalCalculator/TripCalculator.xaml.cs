@@ -26,5 +26,22 @@ namespace Calculator
 		{
 			this.InitializeComponent();
 		}
+
+		private void Todays_Date_Button_Click(object sender, RoutedEventArgs e)
+		{
+			DatePicker.Date = DateTime.Now;
+		}
+
+		private void Calculate_Button_Click(object sender, RoutedEventArgs e)
+		{
+			int pricePerDay, numOfDays;
+			if (int.TryParse(PricePerDayBox.Text, out pricePerDay) && int.TryParse(NumberOfDaysHiredBox.Text, out numOfDays))
+				PriceBox.Text = (pricePerDay * numOfDays).ToString();
+		}
+
+		private void Exit_Button_Click(object sender, RoutedEventArgs e)
+		{
+			Frame?.Navigate(typeof(MainMenu));
+		}
 	}
 }
