@@ -8,7 +8,36 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <TextBlock Height="75" Width="325" VerticalAlignment="Top" Margin="0,15,0,0" HorizontalAlignment="Center" TextAlignment="Center" FontSize="48"> Trip Calculator</TextBlock>
+        <StackPanel Orientation="Horizontal" BorderThickness="1" BorderBrush="DarkBlue" Width="822">
+            <TextBlock Height="70" Width="250" Margin="0, 0, 0, 0" Padding="8" FontSize="36" TextAlignment="Center"><Run Text="Date Hired"/></TextBlock>
+            <DatePicker Margin="0, 0, 15, 0" Width="300" x:Name="DatePicker"/>
+            <Button Height="75" Width="250" FontSize="36" Content="Today's Date" Click="Todays_Date_Button_Click"/>
+        </StackPanel>
+		<StackPanel Orientation="Horizontal" BorderThickness="1" BorderBrush="DarkBlue" Width="805">
+			<TextBlock Height="70" Width="400" Margin="0, 0, 0, 0" Padding="8" FontSize="36" TextAlignment="Center"><Run Text="Starting Kilometers"/></TextBlock>
+			<TextBox Width="250" PlaceholderText="0" FontSize="36" Padding="8"></TextBox>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" BorderThickness="1" BorderBrush="DarkBlue" Width="805">
+			<TextBlock Height="70" Width="400" Margin="0, 0, 0, 0" Padding="8" FontSize="36" TextAlignment="Center"><Run Text="Ending Kilometers"/></TextBlock>
+			<TextBox Width="250" PlaceholderText="0" FontSize="36" Padding="8"></TextBox>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" BorderThickness="1" BorderBrush="DarkBlue" Width="805">
+			<TextBlock Height="70" Width="400" Margin="0, 0, 0, 0" Padding="8" FontSize="36" TextAlignment="Center" ><Run Text="Number of days hired"/></TextBlock>
+			<TextBox Width="250" PlaceholderText="0" FontSize="36" Padding="8" x:Name="NumberOfDaysHiredBox"></TextBox>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" BorderThickness="1" BorderBrush="DarkBlue" Width="805">
+			<TextBlock Height="70" Width="400" Margin="0, 0, 0, 0" Padding="8" FontSize="36" TextAlignment="Center" ><Run Text="Price per Day"/></TextBlock>
+			<TextBox Width="250" PlaceholderText="0" FontSize="36" Padding="8" x:Name="PricePerDayBox"></TextBox>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" BorderThickness="1" BorderBrush="DarkBlue" Width="805">
+			<TextBlock Height="70" Width="400" Margin="0, 0, 0, 0" Padding="8" FontSize="36" TextAlignment="Center" ><Run Text="Price"/></TextBlock>
+			<TextBox Width="250" PlaceholderText="0" FontSize="36" Padding="8" x:Name="PriceBox"></TextBox>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" BorderThickness="1" BorderBrush="DarkBlue" Width="505">
+			<Button Height="75" Width="250" FontSize="36" Content="Calculate" Click="Calculate_Button_Click"/>
+			<Button Height="75" Width="250" FontSize="36" Content="Exit" Click="Exit_Button_Click"/>
+		</StackPanel>
+	</StackPanel>
 </Page>
