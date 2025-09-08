@@ -27,7 +27,8 @@ Margin="40"/>
 				<Button Name="TripCalculatorButton" Content="Trip Calculator" Click="TripCalculatorButton_Click" Margin="25" Background="LightYellow" BorderBrush="Blue" BorderThickness="2" Foreground="Black" FontWeight="Bold" FontSize="30" />
 				
 				<Button Name="Exit" Content="Exit" Click="ExitButton_Click" Margin="25" Background="LightYellow" BorderBrush="Blue" BorderThickness="2" Foreground="Black" FontWeight="Bold" FontSize="30" />
-				
+
+				<TextBlock Text="Created by Tom, Vinamar, and Jonathan"/>
 			</StackPanel>
 
 		</StackPanel>
